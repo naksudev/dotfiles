@@ -1,2 +1,2 @@
-# dotfiles
-My personal dotfiles for Arch Linux
+# Naksu's Dotfiles
+My personal list of dotfiles. 
