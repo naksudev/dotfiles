@@ -1,1 +1,4 @@
-/home/nak/.config/nvim/coc-settings.json
+{
+  "snippets.ultisnips.pythonPrompt": false,
+  "colors.enable": true,
+}
