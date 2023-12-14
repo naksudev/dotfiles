@@ -1,0 +1,57 @@
+* {
+	border: none;
+	border-radius: 0;
+	font-family: "FOT-RodinProN", "Font Awesome 6 Free";	
+	min-height: 0;
+	font-size: 14px;
+}
+
+window#waybar {
+    background-color: #dcd8c0; 
+    color: #3f352f;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #3f352f;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused {
+    background-color: #64727D;
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+}
+
+#backlight,
+#battery,
+#clock,
+#cpu,
+#custom-mail,
+#custom-poweroff,
+#custom-weather,
+#disk,
+#idle_inhibitor,
+#memory,
+#mode,
+#network.vpn,
+#network.wifi,
+#network.ethernet,
+#network.disconnected,
+#pulseaudio,
+#taskbar,
+#temperature,
+#tray {
+    padding: 0 4px;
+    margin: 0 0px;
+    color: #3f352f;
+}
+
