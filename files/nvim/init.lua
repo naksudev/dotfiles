@@ -15,6 +15,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'junegunn/vim-easy-align'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 ]]
 
 vim.cmd [[
