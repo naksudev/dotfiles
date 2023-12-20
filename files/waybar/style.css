@@ -14,21 +14,29 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 0 5px;
     background-color: transparent;
     color: #3f352f;
+    margin-right: 2px;
 }
 
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
 }
 
 #workspaces button.focused {
     background-color: #64727D;
-}
+    border-radius: 50%;
+} 
 
 #workspaces button.urgent {
     background-color: #eb4d4b;
+    border-radius: 50%;
+}
+
+#workspaces button.active {
+    background-color: #bdb795;
+    border-radius: 50%;
 }
 
 #backlight,
@@ -55,3 +63,12 @@ window#waybar {
     color: #3f352f;
 }
 
+#battery.warning { 
+    background-color: #dcd8c0;
+    color: #c45c00;
+}
+
+#battery.critical {
+    background-color: #dcd8c0;
+    color: red;
+}
