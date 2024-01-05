@@ -19,6 +19,7 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias py="python3"
 alias cwt="python3 /home/nak/.config/hypr/wallpaper.py -toggle-nsfw"
+alias vim="nvim"
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
@@ -86,12 +87,4 @@ ZSH_HIGHLIGHT_STYLES[arg0]='fg=#cdd6f4'
 ZSH_HIGHLIGHT_STYLES[default]='fg=#cdd6f4'
 ZSH_HIGHLIGHT_STYLES[cursor]='fg=#cdd6f4'
 
-# Functions
-_change_wallpaper_type() {
-    if [[ "$1" == "NSFW" || "$1" == "SFW" ]]; then
-        export WALLPAPER_TYPE="$1"
-        echo "[!] Wallpapers are now $1 type."
-    else
-        echo "[X] Please specify 'NSFW' ou 'SFW'."
-    fi
-}
+
