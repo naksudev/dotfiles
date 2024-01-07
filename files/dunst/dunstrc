@@ -1,6 +1,8 @@
 [global]
 frame_color = "#3F353A"
 separator_color= frame
+origin = top-right
+offset = 10x20
 
 [urgency_low]
 background = "#DCD8C0"
