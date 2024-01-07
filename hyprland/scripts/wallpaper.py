@@ -6,7 +6,7 @@ import argparse
 WALLPAPER_PATH_NSFW = "/home/nak/Pictures/Wallpapers/Nier/NSFW"
 WALLPAPER_PATH_SFW = "/home/nak/Pictures/Wallpapers/Nier/SFW"
 
-MODE_FILE = "/home/nak/.config/hypr/wallpaper_mode"  
+MODE_FILE = "/home/nak/.config/hypr/assets/wallpaper_mode"  
 
 def read_mode():
     try:
@@ -35,13 +35,13 @@ def change_wallpaper():
         chosen_image = image_files[int(time.time()) % len(image_files)]
         subprocess.run(["/usr/bin/swww", "img", chosen_image])
     else:
-        print("Aucune image trouvée dans le répertoire.")
+        print("No images found in the directory.")
         exit(1)
 
 if __name__ == "__main__":
     # Arguments Parser
-    parser = argparse.ArgumentParser(description='Script de changement de fond d\'écran')
-    parser.add_argument('-toggle-nsfw', action='store_true', help='Basculer le mode NSFW')
+    parser = argparse.ArgumentParser(description='Wallpaper switching script')
+    parser.add_argument('-toggle-nsfw', action='store_true', help='Toggle between NSFW mode')
 
     args = parser.parse_args()
 

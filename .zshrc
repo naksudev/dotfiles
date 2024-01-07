@@ -18,7 +18,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias py="python3"
-alias cwt="python3 /home/nak/.config/hypr/wallpaper.py -toggle-nsfw"
+alias cwt="python3 /home/nak/.config/hypr/scripts/wallpaper.py -toggle-nsfw"
 alias vim="nvim"
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
