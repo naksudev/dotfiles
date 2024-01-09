@@ -1,22 +1,21 @@
 * {
-	border: none;
-	border-radius: 0;
 	font-family: "FOT-RodinProN", "Font Awesome 6 Free";	
-	min-height: 0;
 	font-size: 14px;
+	font-weight: 500;
 }
 
 window#waybar {
-    background-color: #dcd8c0; 
-    color: #3f352f;
+    background-color: #1e1c1b; 
+    color: #968e7e;
     transition-property: background-color;
     transition-duration: .5s;
 }
 
 #workspaces button {
     background-color: transparent;
-    color: #3f352f;
-    margin-right: 2px;
+    color: #7c7567;
+    	margin: 6px 3px 6px 6px;
+	padding: 4px 2px 4px 2px;
 }
 
 #workspaces button:hover {
@@ -35,7 +34,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background-color: #bdb795;
+    background-color: #4d4640;
     border-radius: 50%;
 }
 
@@ -60,15 +59,15 @@ window#waybar {
 #tray {
     padding: 0 4px;
     margin: 0 0px;
-    color: #3f352f;
+    color: #7c7567;
 }
 
 #battery.warning { 
-    background-color: #dcd8c0;
+    background-color: #1e1c1b;
     color: #c45c00;
 }
 
 #battery.critical {
-    background-color: #dcd8c0;
+    background-color: #1e1c1b;
     color: red;
 }
