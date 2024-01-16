@@ -16,7 +16,7 @@
        "disable-scroll": true,
        "all-outputs": true,
        "warp-on-scroll": false,
-       "format": " {id} ",
+       "format": " {name} ",
        "format-icons": {
            "1": "",
            "2": "",
