@@ -21,16 +21,22 @@ def write_mode(mode):
 
 def toggle_nsfw_mode():
     current_mode = read_mode()
+    
+    # Set new mode
     new_mode = "NSFW" if current_mode == "SFW" else "SFW"
     write_mode(new_mode)
     change_wallpaper()
 
 def change_wallpaper():
     current_mode = read_mode()
+
+    # Set wallpaper path of current theme
     wallpaper_path = WALLPAPER_PATH_NSFW if current_mode == "NSFW" else WALLPAPER_PATH_SFW
 
+    # Retrieves all wallpapers
     image_files = [os.path.join(wallpaper_path, file) for file in os.listdir(wallpaper_path) if os.path.isfile(os.path.join(wallpaper_path, file))]
 
+    # Apply wallpaper
     if image_files:
         chosen_image = image_files[int(time.time()) % len(image_files)]
         subprocess.run(["/usr/bin/swww", "img", chosen_image])
