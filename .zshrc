@@ -41,7 +41,7 @@ eval "$(starship init zsh)"
 export PATH="$PATH:/home/nak/.local/bin"
 
 # Catppuccin color palette
-ZSH_HIGHLIGHT_STYLES[comment]='fg=#585b70'
+ZSH_HIGHLIGHT_STYLES[comment]='fg=#585baC'
 ZSH_HIGHLIGHT_STYLES[alias]='fg=#a6e3a1'
 ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=#a6e3a1'
 ZSH_HIGHLIGHT_STYLES[global-alias]='fg=#a6e3a1'
