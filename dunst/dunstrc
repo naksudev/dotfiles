@@ -1,4 +1,5 @@
 [global]
+monitor = 0
 frame_color = "#3F353A"
 separator_color= frame
 origin = top-right
