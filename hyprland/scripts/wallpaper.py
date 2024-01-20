@@ -3,10 +3,10 @@ import subprocess
 import time
 import argparse
 
-WALLPAPER_PATH_NSFW = "/home/nak/Pictures/Wallpapers/Nier/NSFW"
-WALLPAPER_PATH_SFW = "/home/nak/Pictures/Wallpapers/Nier/SFW"
+WALLPAPER_PATH_NSFW = "/home/naksu/Pictures/Wallpapers/Nier/NSFW"
+WALLPAPER_PATH_SFW = "/home/naksu/Pictures/Wallpapers/Nier/SFW"
 
-MODE_FILE = "/home/nak/.config/hypr/assets/wallpaper_mode"  
+MODE_FILE = "/home/naksu/.config/hypr/assets/wallpaper_mode"  
 
 def read_mode():
     try:
