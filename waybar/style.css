@@ -14,8 +14,8 @@ window#waybar {
 #workspaces button {
     background-color: transparent;
     color: #7c7567;
-    	margin: 6px 3px 6px 6px;
-	padding: 4px 2px 4px 2px;
+    	margin: 6px 2px 6px 6px;
+	padding: 0px 2px 0px 2px;
 }
 
 #workspaces button:hover {
