@@ -1,6 +1,7 @@
 {
     // Waybar configuration
     "layer": "top", // Waybar at top layer
+    "output": "eDP-1",
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 40, // Waybar height (to be removed for auto height)
     "spacing": 4, // Gaps between modules (4px)
@@ -13,6 +14,7 @@
     
     // Modules configuration
     "hyprland/workspaces": {
+       "output": "eDP-1",
        "disable-scroll": true,
        "all-outputs": true,
        "warp-on-scroll": false,
@@ -38,6 +40,7 @@
         }
     },
     "hyprland/mode": {
+	"output": ["eDP-1", "HDMI-A-1"],
         "format": "<span style=\"italic\">{}</span>"
     },
     "hyprland/scratchpad": {
