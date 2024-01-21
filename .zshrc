@@ -11,7 +11,7 @@ export ZSH="$HOME/.oh-my-zsh"
 zstyle ':omz:update' mode reminder 
 
 # Plugins
-plugins=(git fzf-tab zsh-autosuggestions)
+plugins=(git fzf-tab zsh-autosuggestions zsh-syntax-highlighting zsh-fzf-history-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -20,7 +20,7 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias py="python3"
 alias vim="nvim"
-alias _cwt="python3 /home/nak/.config/hypr/scripts/wallpaper.py -toggle-nsfw"
+alias _cwt="python3 /home/naksu/.config/hypr/scripts/wallpaper.py -toggle-nsfw"
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
@@ -31,7 +31,6 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main cursor)
 typeset -gA ZSH_HIGHLIGHT_STYLES
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-source /home/nak/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(starship init zsh)"
 
