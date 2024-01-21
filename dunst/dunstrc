@@ -1,7 +1,7 @@
 [global]
 monitor = 1
 frame_color = "#3F353A"
-separator_color= frame
+separator_color = frame
 origin = top-right
 offset = 10x20
 
