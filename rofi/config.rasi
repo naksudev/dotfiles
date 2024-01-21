@@ -1,0 +1,4 @@
+configuration {
+	font: "FOT-RodinProN 12";
+}
+@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
