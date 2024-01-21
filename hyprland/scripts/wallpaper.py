@@ -6,7 +6,7 @@ import argparse
 WALLPAPER_PATH_NSFW = "/home/naksu/Pictures/Wallpapers/Nier/NSFW"
 WALLPAPER_PATH_SFW = "/home/naksu/Pictures/Wallpapers/Nier/SFW"
 
-MODE_FILE = "/home/naksu/.config/hypr/assets/wallpaper_mode"  
+MODE_FILE = "/tmp/swww_mode"  
 
 def read_mode():
     try:
