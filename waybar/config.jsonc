@@ -1,7 +1,7 @@
 {
     // Waybar configuration
     "layer": "top", // Waybar at top layer
-    "output": "eDP-1",
+    "output": ["eDP-1", "HDMI-A-1"],
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 40, // Waybar height (to be removed for auto height)
     "spacing": 4, // Gaps between modules (4px)
@@ -10,15 +10,14 @@
     "modules-left": ["hyprland/workspaces", "custom/media"],
     "modules-center": ["hyprland/window"],
     //"modules-right": ["idle_inhibitor", "custom/sep", "pulseaudio", "custom/sep", "network", "custom/sep", "backlight", "custom/sep", "keyboard-state", "custom/sep", "hyprland/language", "custom/sep", "battery", "custom/sep", "clock"],
-    "modules-right": ["pulseaudio", "custom/sep", "network", "custom/sep", "battery", "custom/sep", "clock"],
+    "modules-right": ["pulseaudio", "custom/sep_right", "network", "custom/sep_right", "battery", "custom/sep_right", "clock"],
     
     // Modules configuration
     "hyprland/workspaces": {
-       "output": "eDP-1",
        "disable-scroll": true,
        "all-outputs": true,
        "warp-on-scroll": false,
-       "format": " {name} ",
+       "format": " ■ {name} ",
        "format-icons": {
            "1": "",
            "2": "",
@@ -28,15 +27,6 @@
            "urgent": "",
            "focused": "",
            "default": ""
-        }
-    },
-    "keyboard-state": {
-        "numlock": true,
-        "capslock": true,
-        "format": "{name} {icon} ",
-        "format-icons": {
-            "locked": "",
-            "unlocked": ""
         }
     },
     "hyprland/mode": {
@@ -61,10 +51,14 @@
         // "icon-size": 21,
         "spacing": 10
     },
+    "hyprland/window": {
+	"format": "{}",
+	"separate-outputs": true
+    },
     "clock": {
 	"format": "{:%H:%M} ",
         // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<tt><big>{calendar}</big></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
@@ -89,7 +83,6 @@
     },
     "battery": {
         "states": {
-            // "good": 95,
             "warning": 30,
             "critical": 15
         },
@@ -135,15 +128,14 @@
         "on-click": "pavucontrol"
     },
     "custom/media": {
-        "format": "\\\\  {} ",
+        "format": " \\\\ {} ",
         "return-type": "json",
         "max-length": 40,
         "escape": true,
-        // "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null"
     },
 
-    "custom/sep": {
+    "custom/sep_right": {
 	"format": "//"
     }
 }

@@ -14,28 +14,21 @@ window#waybar {
 #workspaces button {
     background-color: transparent;
     color: #7c7567;
-    	margin: 6px 2px 6px 6px;
-	padding: 0px 2px 0px 2px;
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 50%;
+    border-radius: 0%;
+    border: none;
 }
 
-#workspaces button.focused {
-    background-color: #64727D;
-    border-radius: 50%;
-} 
-
 #workspaces button.urgent {
-    background-color: #eb4d4b;
-    border-radius: 50%;
+    color: #eb4d4b;
+    border-radius: 0%;
 }
 
 #workspaces button.active {
-    background-color: #4d4640;
-    border-radius: 50%;
+    color: #b0a794;
+    border-radius: 0%;
 }
 
 #backlight,
@@ -65,9 +58,17 @@ window#waybar {
 #battery.warning { 
     background-color: #1e1c1b;
     color: #c45c00;
+    animation: battery_blink 2s linear infinite;
 }
 
 #battery.critical {
     background-color: #1e1c1b;
     color: red;
+    animation: battery_blink 0.5s linear infinite;
+}
+
+@keyframes battery_blink {
+	50% {
+		color: #968e7e;	
+	}
 }
