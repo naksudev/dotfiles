@@ -14,10 +14,10 @@ window#waybar {
 #workspaces button {
     background-color: transparent;
     color: #7c7567;
+    padding: 4px 2px 4px 2px;
 }
 
 #workspaces button:hover {
-    border-radius: 0%;
     border: none;
 }
 
