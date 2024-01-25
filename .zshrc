@@ -21,6 +21,7 @@ source $ZSH/oh-my-zsh.sh
 alias py="python3"
 alias vim="nvim"
 alias _cwt="python3 /home/naksu/.config/hypr/scripts/wallpaper.py -toggle-nsfw"
+alias _rando_name="python3 /home/naksu/Crafting_Table/Python/rando_file_name.py"
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
