@@ -36,7 +36,7 @@ def change_wallpaper():
     # Retrieves all wallpapers
     image_files = [os.path.join(wallpaper_path, file) for file in os.listdir(wallpaper_path) if os.path.isfile(os.path.join(wallpaper_path, file))]
 
-    # Apply wallpaper
+    # Apply a random wallpaper
     if image_files:
         chosen_image = image_files[int(time.time()) % len(image_files)]
         subprocess.run(["/usr/bin/swww", "img", chosen_image])
