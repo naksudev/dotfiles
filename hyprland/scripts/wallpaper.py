@@ -1,7 +1,8 @@
 import os
 import subprocess
-import time
 import argparse
+import time
+import random
 
 WALLPAPER_PATH_NSFW = "/home/naksu/Pictures/Wallpapers/Nier/NSFW"
 WALLPAPER_PATH_SFW = "/home/naksu/Pictures/Wallpapers/Nier/SFW"
@@ -38,8 +39,8 @@ def change_wallpaper():
 
     # Apply a random wallpaper
     if image_files:
-        chosen_image = image_files[int(time.time()) % len(image_files)]
-        subprocess.run(["/usr/bin/swww", "img", chosen_image])
+        chosen_image = random.choice(image_files) 
+        subprocess.run(["/usr/bin/swww", "img", chosen_image, "--transition-fps=50"])
     else:
         print("No images found in the directory.")
         exit(1)
