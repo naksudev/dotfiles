@@ -17,7 +17,7 @@
        "disable-scroll": true,
        "all-outputs": true,
        "warp-on-scroll": false,
-       "format": " ■ {name} ",
+       "format": " {name} ",
        "format-icons": {
            "1": "",
            "2": "",
@@ -53,7 +53,8 @@
     },
     "hyprland/window": {
 	"format": "{}",
-	"separate-outputs": true
+	"separate-outputs": true,
+	"max-length": 50
     },
     "clock": {
 	"format": "{:%H:%M} ",
@@ -128,7 +129,7 @@
         "on-click": "pavucontrol"
     },
     "custom/media": {
-        "format": " \\\\ {} ",
+        "format": "\\\\  {} ",
         "return-type": "json",
         "max-length": 40,
         "escape": true,
