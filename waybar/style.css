@@ -2,6 +2,7 @@
 	font-family: "FOT-RodinProN", "Font Awesome 6 Free";	
 	font-size: 14px;
 	font-weight: 500;
+	border: 0px;
 }
 
 window#waybar {
@@ -15,20 +16,18 @@ window#waybar {
     background-color: transparent;
     color: #7c7567;
     padding: 4px 2px 4px 2px;
+    margin: 0px 2px 0px 2px;
 }
 
 #workspaces button:hover {
-    border: none;
 }
 
 #workspaces button.urgent {
     color: #eb4d4b;
-    border-radius: 0%;
 }
 
 #workspaces button.active {
     color: #b0a794;
-    border-radius: 0%;
 }
 
 #backlight,
