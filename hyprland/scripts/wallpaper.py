@@ -40,7 +40,7 @@ def change_wallpaper():
     # Apply a random wallpaper
     if image_files:
         chosen_image = random.choice(image_files) 
-        subprocess.run(["/usr/bin/swww", "img", chosen_image, "--transition-fps=50"])
+        subprocess.run(["/usr/bin/swww", "img", chosen_image, "--transition-fps=60"])
     else:
         print("No images found in the directory.")
         exit(1)
@@ -48,12 +48,15 @@ def change_wallpaper():
 if __name__ == "__main__":
     # Arguments Parser
     parser = argparse.ArgumentParser(description='Wallpaper switching script')
-    parser.add_argument('-toggle-nsfw', action='store_true', help='Toggle between NSFW mode')
+    parser.add_argument('--toggle-nsfw', action='store_true', help='Toggle between NSFW mode')
+    parser.add_argument('--next', action='store_true', help='Changes to next wallpaper')
 
     args = parser.parse_args()
 
     if args.toggle_nsfw:
         toggle_nsfw_mode()
+    elif args.next:
+        change_wallpaper()
     else:
         interval = 300
         while True:
