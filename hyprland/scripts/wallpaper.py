@@ -39,7 +39,7 @@ def change_wallpaper():
 
     # Apply a random wallpaper
     if image_files:
-        chosen_image = random.choice(image_files) 
+        chosen_image = random.choice(image_files)
         subprocess.run(["/usr/bin/swww", "img", chosen_image, "--transition-fps=60"])
     else:
         print("No images found in the directory.")
