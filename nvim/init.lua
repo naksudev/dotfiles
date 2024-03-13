@@ -17,6 +17,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' }
 Plug 'elkowar/yuck.vim'
+Plug 'wuelnerdotexe/vim-astro'
 ]]
 
 vim.cmd [[
@@ -67,6 +68,8 @@ require("catppuccin").setup({
 })
 
 vim.cmd.colorscheme "catppuccin"
+
+-- TREE-SITTER-ASTRO
 
 -- NVIM-TREE SETUP
 vim.g.loaded_netrw = 1
