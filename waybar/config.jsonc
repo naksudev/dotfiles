@@ -137,7 +137,7 @@
     },
 
     "custom/sep_right": {
-	"format": "//"
+	"format": "|"
     }
 }
 

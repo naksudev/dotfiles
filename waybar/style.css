@@ -71,3 +71,7 @@ window#waybar {
 		color: #968e7e;	
 	}
 }
+
+#custom-sep_right {
+	color: #ffffff
+}
