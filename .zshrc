@@ -93,3 +93,11 @@ ZSH_HIGHLIGHT_STYLES[cursor]='fg=#cdd6f4'
 PATH="$HOME/.local/bin:${PATH}"
 export PATH
 export PATH
+
+# pnpm
+export PNPM_HOME="/home/naksu/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
