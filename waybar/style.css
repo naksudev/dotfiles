@@ -1,77 +1,55 @@
 * {
-	font-family: "FOT-RodinProN", "Font Awesome 6 Free";	
+	font-family: "JetBrains Mono NL", "Font Awesome 6 Free";	
 	font-size: 14px;
-	font-weight: 500;
 	border: 0px;
 }
 
 window#waybar {
-    background-color: #1e1c1b; 
-    color: #968e7e;
-    transition-property: background-color;
-    transition-duration: .5s;
+	font-weight: 500;
+	background-color: #1E1C1B; 
+	color: #968E7E;
+	transition-property: background-color;
+	transition-duration: .5s;
 }
 
 #workspaces button {
-    background-color: transparent;
-    color: #7c7567;
-    padding: 4px 2px 4px 2px;
-    margin: 0px 2px 0px 2px;
+	color: #968E7E;
+	font-weight: 500;
+	background: transparent;
+	margin-right: -6px;
 }
 
 #workspaces button:hover {
-}
-
-#workspaces button.urgent {
-    color: #eb4d4b;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	font-weight: 900;
 }
 
 #workspaces button.active {
-    color: #b0a794;
+	font-weight: 900;
 }
 
-#backlight,
-#battery,
-#clock,
-#cpu,
-#custom-mail,
-#custom-poweroff,
-#custom-weather,
-#disk,
-#idle_inhibitor,
-#memory,
-#mode,
-#network.vpn,
-#network.wifi,
-#network.ethernet,
-#network.disconnected,
-#pulseaudio,
-#taskbar,
-#temperature,
-#tray {
-    padding: 0 4px;
-    margin: 0 0px;
-    color: #7c7567;
+.modules-right * {
+	margin-right: 8px;
 }
 
-#battery.warning { 
-    background-color: #1e1c1b;
-    color: #c45c00;
-    animation: battery_blink 2s linear infinite;
+.modules-left #custom-sep {
+	margin-right: 8px;
+	margin-left: 2px;
+}
+
+.modules-left #cava {
+	margin-left: 8px;
+}
+
+#custom-sep {
+	color: #fff;
+}
+
+#battery.warning {
+	color: #d19721;
 }
 
 #battery.critical {
-    background-color: #1e1c1b;
-    color: red;
-    animation: battery_blink 0.5s linear infinite;
-}
-
-@keyframes battery_blink {
-	50% {
-		color: #968e7e;	
-	}
-}
-
-#custom-sep_right {
-	color: #ffffff
+	color: #d12121;
 }
