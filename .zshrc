@@ -20,6 +20,7 @@ source $ZSH/oh-my-zsh.sh
 # Aliases
 alias py="python3"
 alias vim="nvim"
+alias ip="ip -c"
 alias _cwt="python3 /home/naksu/.config/hypr/scripts/wallpaper.py --toggle-nsfw"
 alias _nw="python3 /home/naksu/.config/hypr/scripts/wallpaper.py --next"
 alias _rando_name="python3 /home/naksu/Crafting_Table/Python/rando_file_name.py"
@@ -91,7 +92,6 @@ ZSH_HIGHLIGHT_STYLES[cursor]='fg=#cdd6f4'
 
 
 PATH="$HOME/.local/bin:${PATH}"
-export PATH
 export PATH
 
 # pnpm
