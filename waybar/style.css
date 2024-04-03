@@ -59,6 +59,32 @@ window#waybar {
 	color: #d12121;
 }
 
+#cpu.warning {
+	color: #d19721;
+}
+
+#cpu.critical {
+	color: #d12121;
+}
+
+#memory.warning {
+	color: #d19721;
+}
+
+#memory.critical {
+	color: #d12121;
+}
+
+#disk.warning {
+	color: #d19721;
+}
+
+#disk.critical {
+	color: #d12121;
+}
+
+
+
 @keyframes rainbow{
 		0%{
 			color: rgb(255,0,0);

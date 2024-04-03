@@ -19,6 +19,7 @@
 	],
 
 	"modules-right": [
+		"temperature",
 		"cpu",
 		"memory",
 		"disk",
@@ -75,20 +76,37 @@
 		"tooltip-format": "{power}W - {time}"
 	},
 
+	"temperature": {
+		"format": " {temperatureC}°C",
+		"critical-threshold": 80
+	},
+
 	"cpu": {
 		"interval": 5,
-		"format": " {usage}%"
+		"format": " {usage}%",
+		"states": {
+			"critical": 80,
+			"warning": 50,
+		}
 	},
 
 	"memory": {
 		"interval": 5,
-		"format": " {}%"
+		"format": " {}%",
+		"states": {
+			"critical": 80,
+			"warning": 50,
+		}
 	},
 
 	"disk": {
 		"interval": 30,
 		"format": " {percentage_used}%",
-		"path": "/"
+		"path": "/",
+		"states": {
+			"critical": 90,
+			"warning": 70,
+		}
 	},
 
 	"custom/sep": {
@@ -96,9 +114,8 @@
 	},
 
 	"cava": {
-		"framerate": 60,
+		"framerate": 30,
 		"autosens": 1,
-		"sensitivity": 8,
 		"bars": 14,
 		"lower_cutoff_freq": 50,
 		"higher_cutoff_freq": 8000,
@@ -109,26 +126,27 @@
 		"bar_delimiter": 0,
 		"monstercat": true,
 		"waves": false,
-		"noise_reduction": 0.20,
+		"noise_reduction": 0.50,
 		"input_delay": 2,
 		"format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
 		"actions": {
 			 "on-click-right": "mode"
 		 }
-
 	},
 
 	"network": {
 		"format": " {ifname}",
 		"format-wifi": " {essid}",
 		"format-disconnected": "⚠ Disconnected",
-
+		"tooltip-format": "{ifname} - {ipaddr}"
 	},
 
 	"pulseaudio": {
-		"format": "{icon} {volume}%",
-		"format-bluetooth": "{icon} {volume}%",
+		"format": "{format_source} {icon} {volume}%",
+		"format-bluetooth": "{format_source} {icon} {volume}%",
     "format-muted": "",
+		"format-source": " {volume}%",
+		"format-source-muted": "",
 		"format-icons": {
 			"headphone": "",
 			"hands-free": "",
