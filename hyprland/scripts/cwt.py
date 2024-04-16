@@ -3,6 +3,7 @@ import subprocess
 import argparse
 import time
 import random
+import psutil
 
 BASE_DIR = os.path.expanduser("/home/naksu/.wallpapers")
 CURRENT_THEME = "/tmp/current_theme"
@@ -32,20 +33,35 @@ def set_wallpaper(theme):
     # Path of the wallpaper theme
     theme_path = os.path.join(BASE_DIR, theme)
 
-    if not os.path.exists(theme_path):
-        print(f"The '{theme}' theme doesn't exist.")
-        return 1
-
-    # List of wallpapers
+    # List of all the wallpapers of the theme
     image_files = [os.path.join(theme_path, file) for file in os.listdir(theme_path) if os.path.isfile(os.path.join(theme_path, file))]
 
+    # Check if the theme exists
+    if not os.path.exists(theme_path):
+        print(f"The '{theme}' theme doesn't exist.")
+        print("Setting nier theme by default.")
+        set_wallpaper("nier")
+
+    # Check if there's any wallpaper of the theme
     if not image_files:
-        print(f"No wallpapers was found for {theme} theme'.")
-        return 1
+        print(f"No wallpapers was found for {theme} theme.")
+        print("Setting nier theme by default.")
+        set_wallpaper("nier")
+
+    # Reload waybar with selected theme
+    update_waybar(theme) 
 
     # Apply a random wallpaper 
-    chosen_image = random.choice(image_files)
-    subprocess.run(["/usr/bin/swww", "img", chosen_image, "--transition-fps=60"])
+    subprocess.run(["/usr/bin/swww", "img", random.choice(image_files), "--transition-fps=60"])
+
+def update_waybar(theme):
+    # Kill current waybar process
+    for proc in psutil.process_iter():
+        if proc.name() == "waybar":
+            proc.kill()
+
+    # Invoke a new waybar process
+    subprocess.Popen(["waybar", "-c", "/home/naksu/.config/waybar/config.jsonc", "-s", f"/home/naksu/.config/waybar/styles/{theme}.css", "-l", "off"])
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Change Wallpaper Theme - Made with ♥ by naksudev')
