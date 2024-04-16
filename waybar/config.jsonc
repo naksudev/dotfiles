@@ -10,7 +10,6 @@
 		"hyprland/workspaces",
 		"custom/sep",
 		"pulseaudio",
-		"cava",
 		"custom/media"
 	],
 
@@ -78,6 +77,7 @@
 
 	"temperature": {
 		"format": " {temperatureC}°C",
+		"hwmon-path": "/sys/class/thermal/thermal_zone1/temp",
 		"critical-threshold": 80
 	},
 
@@ -164,7 +164,7 @@
 		"return-type": "json",
 		"max-length": 40,
 		"escape": true,
-		"exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null"
+		"exec": "$HOME/.config/waybar/scripts/mediaplayer.py --player spotify 2> /dev/null"
 	}
 }
 
