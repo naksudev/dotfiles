@@ -48,9 +48,6 @@ def set_wallpaper(theme):
         print("Setting nier theme by default.")
         set_wallpaper("nier")
 
-    # Reload waybar with selected theme
-    update_waybar(theme) 
-
     # Apply a random wallpaper 
     subprocess.run(["/usr/bin/swww", "img", random.choice(image_files), "--transition-fps=60"])
 
@@ -78,6 +75,7 @@ if __name__ == "__main__":
         list_themes()
     elif args.command == 'set':
         set_wallpaper(args.theme)
+        update_waybar(args.theme)
     elif args.command == 'next':
         set_wallpaper(get_current_theme())
     else:
