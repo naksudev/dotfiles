@@ -18,10 +18,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Setup and load plugins
 require("lazy").setup({{ import = 'plugins' }})
 
 -- Load user settings
 require('user.settings')
 require('user.keymaps')
 
+-- Default theme
 pcall(vim.cmd.colorscheme, 'catppuccin-mocha')
