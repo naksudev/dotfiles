@@ -2,19 +2,18 @@ import json
 import subprocess
 import random
 
-# Lire le fichier JSON
+# Read JSON data
 with open('/home/naksu/.config/hypr/assets/greeting_list.json') as f:
     data = json.load(f)
 
-# Sélectionner aléatoirement un enregistrement
+# Pick a random index
 random_data = random.choice(data)
 
-# Extraire les données sélectionnées
+# Save the random index into vars
 name = random_data['name']
 avatar = "/home/naksu/.config/hypr/assets/greeting_sprites/" + random_data['avatar']
 message = random_data['message']
 
-# Exécuter la commande bash
+# Send notification
 subprocess.run(["notify-send", name, message, "-i", avatar])
-
 
