@@ -75,7 +75,7 @@ if __name__ == "__main__":
         list_themes()
     elif args.command == 'set':
         set_wallpaper(args.theme)
-        update_waybar(args.theme)
+        #update_waybar(args.theme)
     elif args.command == 'next':
         set_wallpaper(get_current_theme())
     else:
