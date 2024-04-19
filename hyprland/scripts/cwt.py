@@ -25,7 +25,7 @@ def list_themes():
         themes = os.path.join(BASE_DIR, theme)
         num_files = len([file for file in os.listdir(themes) if os.path.isfile(os.path.join(themes, file))])
         print(f"- {theme} [{num_files}]")
-    print("- random (NOT AVAILABLE YET)")
+    print("- random")
 
 def set_wallpaper(theme):
     set_current_theme(theme)
