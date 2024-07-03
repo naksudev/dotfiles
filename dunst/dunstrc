@@ -6,14 +6,14 @@ origin = top-right
 offset = 10x20
 
 [urgency_low]
-background = "#1E1C1B"
-foreground = "#968E7E"
+background = "#0C0D11"
+foreground = "#CCC9A1"
 
 [urgency_normal]
-background = "#1E1C1B"
-foreground = "#968E7E"
+background = "#0C0D11"
+foreground = "#CCC9A1"
 
 [urgency_critical]
-background = "#1E1C1B"
-foreground = "#968E7E"
+background = "#0C0D11"
+foreground = "#CCC9A1"
 frame_color = "#FAB310"

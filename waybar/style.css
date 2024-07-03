@@ -6,14 +6,14 @@
 
 window#waybar {
 	font-weight: 500;
-	background-color: #1E1C1B; 
-	color: #968E7E;
+	background-color: #0C0D11; 
+	color: #CCC9A1;
 	transition-property: background-color;
 	transition-duration: .5s;
 }
 
 #workspaces button {
-	color: #968E7E;
+	color: #CCC9A1;
 	font-weight: 500;
 	background: transparent;
 	margin-right: -6px;
@@ -43,7 +43,7 @@ window#waybar {
 }
 
 #custom-sep {
-	color: #fff;
+	color: #FFF;
 }
 
 #battery.charging {
