@@ -27,3 +27,6 @@ require('user.keymaps')
 
 -- Default theme
 pcall(vim.cmd.colorscheme, 'catppuccin-mocha')
+
+-- Env
+vim.env.NVIM = 1
