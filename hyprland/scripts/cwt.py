@@ -13,7 +13,7 @@ def get_current_theme():
         with open(CURRENT_THEME, 'r') as file:
             return file.read().strip()
     except FileNotFoundError:
-        set_current_theme("nier") 
+        set_current_theme("generic") 
 
 def set_current_theme(mode):
     with open(CURRENT_THEME, 'w') as file:
@@ -25,7 +25,6 @@ def list_themes():
         themes = os.path.join(BASE_DIR, theme)
         num_files = len([file for file in os.listdir(themes) if os.path.isfile(os.path.join(themes, file))])
         print(f"- {theme} [{num_files}]")
-    print("- random")
 
 def set_wallpaper(theme):
     set_current_theme(theme)
@@ -39,14 +38,14 @@ def set_wallpaper(theme):
     # Check if the theme exists
     if not os.path.exists(theme_path):
         print(f"The '{theme}' theme doesn't exist.")
-        print("Setting nier theme by default.")
-        set_wallpaper("nier")
+        print("Setting generic theme by default.")
+        set_wallpaper("generic")
 
     # Check if there's any wallpaper of the theme
     if not image_files:
         print(f"No wallpapers was found for {theme} theme.")
-        print("Setting nier theme by default.")
-        set_wallpaper("nier")
+        print("Setting generic theme by default.")
+        set_wallpaper("generic")
 
     # Apply a random wallpaper 
     subprocess.run(["/usr/bin/swww", "img", random.choice(image_files), "--transition-fps=60"])
