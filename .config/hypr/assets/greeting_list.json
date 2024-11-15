@@ -33,6 +33,16 @@
     "name": "Cedric",
     "avatar": "cedric_talk.png",
     "message": "It's you!"
-  }
+  },
+	{
+		"name": "Omori",
+		"avatar": "omori.webp",
+		"message": "Waiting for something to happen?"
+	},
+	{
+		"name": "Everything is going to be okay...",
+		"avatar": "",
+		"message": ""
+	}
 ]
 
