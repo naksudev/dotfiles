@@ -18,31 +18,15 @@ CONFIG_FILES=(
 
 # Back up function (single file or directory)
 backup_file() {
-	local file="$1"
-	local dest_dir="./$(dirname "$file")"  
-	local dest_path="./$file" 
+	local source="$HOME/$1"
+	local destination="./$file"
 
-	# Check if file or directory exists in the home directory
-	if [ -e "$HOME/$file" ]; then
-		mkdir -p "$dest_dir"
-		
-		# If it's a file, compare before copying
-		if [ -f "$HOME/$file" ]; then
-			if [ ! -e "$dest_path" ] || ! cmp -s "$HOME/$file" "$dest_path"; then
-				echo "Updating file $file"
-				cp --preserve=mode,timestamps "$HOME/$file" "$dest_dir"
-			else
-				echo "File $file is up to date, skipping."
-			fi
-		# If it's a directory, use rsync to handle differences
-		elif [ -d "$HOME/$file" ]; then
-			echo "Syncing directory $file"
-			rsync -av "$HOME/$file" "./$(dirname $file)/"
-		else
-			echo "Skipping $file (unsupported file type)."
-		fi
+	if [ -e "$source" ]; then
+		echo "Syncing $source."
+		rsync -a --delete "$source" "$(dirname "$destination")/"
 	else
-		echo "Error: $file not found in home directory. Skipping."
+		echo "$1 file or folder no longer exists in the source. Deleting it in destination."
+		rm -rf "$destination"
 	fi
 }
 
@@ -53,4 +37,3 @@ for file in "${CONFIG_FILES[@]}"; do
 done
 
 echo "Backup completed."
-
