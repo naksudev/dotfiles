@@ -1,4 +1,5 @@
 ## ZSH configuration ##
+# TODO: Clean up this mess.
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -87,7 +88,6 @@ ZSH_HIGHLIGHT_STYLES[redirection]='fg=#cdd6f4'
 ZSH_HIGHLIGHT_STYLES[arg0]='fg=#cdd6f4'
 ZSH_HIGHLIGHT_STYLES[default]='fg=#cdd6f4'
 ZSH_HIGHLIGHT_STYLES[cursor]='fg=#cdd6f4'
-
 
 PATH="$HOME/.local/bin:${PATH}"
 export PATH
