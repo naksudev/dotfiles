@@ -22,7 +22,7 @@ backup_file() {
 	local destination="./$file"
 
 	if [ -e "$source" ]; then
-		echo "Syncing $source."
+		echo "Syncing $source"
 		rsync -a --delete "$source" "$(dirname "$destination")/"
 	else
 		echo "$1 file or folder no longer exists in the source. Deleting it in destination."
@@ -31,9 +31,9 @@ backup_file() {
 }
 
 # Main script logic
-echo "Starting backup of configuration files.."
+echo -e "\033[1;31mStarting backup of configuration files..\033[0m"
 for file in "${CONFIG_FILES[@]}"; do
 	backup_file "$file"
 done
 
-echo "Backup completed."
+echo -e "\033[1;32mBackup completed."
