@@ -12,7 +12,6 @@ CONFIG_FILES=(
 	".config/user-dirs.dirs"
 	".config/user-dirs.locale"
 	".config/kitty"
-	".config/cwt"
 	".config/dunst"
 	".config/rofi"
 )
