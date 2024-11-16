@@ -42,7 +42,7 @@ INTERVAL=300
 #    -   no:   Do not resize the image
 #    -   crop: Resize the image to fill the whole screen, cropping out parts that don't fit
 #    -   fit:  Resize the image to fit inside the screen, preserving the original aspect ratio
-RESIZE_TYPE="no"
+RESIZE_TYPE="crop"
 
 DISPLAY_LIST=$(swww query | grep -Po "^[^:]+")
 
