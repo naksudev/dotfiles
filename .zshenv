@@ -2,3 +2,4 @@
 if [[ -z "$NVIM" ]]; then
 	pfetch | lolcat
 fi
+
