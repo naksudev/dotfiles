@@ -32,6 +32,8 @@ typeset -gA ZSH_HIGHLIGHT_STYLES
 alias py="python3"
 alias vim="nvim"
 alias ip="ip -c"
+alias venv="python3 -m venv .venv"
+alias help="echo No."
 
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
