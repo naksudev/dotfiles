@@ -1,170 +1,200 @@
-{
-	// Bar configuration
-	"layer": "top",
-	"position": "top",
-	"height": 40,
-	"spacing": 4,
+[
+	{
+		// Bar configuration
+		"layer": "top",
+		"position": "top",
+		"height": 32,
+		"spacing": 4,
 
-	// Modules orders
-	"modules-left": [
-		"hyprland/workspaces",
-		"custom/sep",
-		"pulseaudio",
-		"custom/media"
-	],
+		// Modules orders
+		"modules-left": [
+			"temperature",
+			"custom/cpuhist",
+			"custom/memhist",
+			"disk",
+		],
 
-	"modules-center": [
-		"clock"
-	],
+		"modules-center": [
+			"clock"
+		],
 
-	"modules-right": [
-		"temperature",
-		"cpu",
-		"memory",
-		"disk",
-		"custom/sep",
-		"network",
-		"custom/sep",
-		"battery"
-	],
+		"modules-right": [
+			"network",
+			"battery"
+		],
 
-	// Modules configurations
-	"hyprland/workspaces": {
-		"disable-scroll": true,
-		"all-outputs": false,
-		"warp-on-scroll": false,
-		"format": "⬤"
-	},
-
-	"clock": {
-		"format": " {:%H:%M}",
-		"tooltip-format": "<tt><small>{calendar}</small></tt>",
-		"format-alt": " {:%d/%m/%Y}",
-		"calendar": {
-			"mode"          : "year",
-			"mode-mon-col"  : 3,
-			"weeks-pos"     : "left",
-			"on-scroll"     : 1,
-			"format": {
-				"months":     "<span color='#ffead3'><b>{}</b></span>",
-				"days":       "<span color='#ffedc7'><b>{}</b></span>",
-				"weeks":      "<span color='#454545'><b>{}</b></span>",
-				"weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
-				"today":      "<span color='#ff6699'><b>{}</b></span>"
-			},
-			"actions":  {
-				"on-click-right": "mode",
-				"on-click-forward": "tz_up",
-				"on-click-backward": "tz_down",
-				"on-scroll-up": "shift_up",
-				"on-scroll-down": "shift_down"
-			}
-		}
-	},
-
-	"battery": {
-		"interval" : 2,
-		"states": {
-		    "warning": 30,
-		    "critical": 15
+		// Modules configurations
+		"hyprland/workspaces": {
+			"disable-scroll": true,
+			"all-outputs": false,
+			"warp-on-scroll": false,
+			"format": "",
 		},
-		"format": "{icon} {capacity}%",
-		"format-charging": " {capacity}%",
-		"format-plugged": " {capacity}%",
-		"format-icons": ["", "", "", "", ""],
-		"tooltip-format": "{power}W - {time}"
+
+		"hyprland/window": {
+			"format": "{}",
+		},
+
+		"clock": {
+			"format": "<span color='#d92b2b'></span> {:%H:%M}",
+			"tooltip-format": "<tt><small>{calendar}</small></tt>",
+			"format-alt": "<span color='#d92b2b'></span> {:%d/%m/%Y}",
+			"calendar": {
+				"mode"          : "year",
+				"mode-mon-col"  : 3,
+				"weeks-pos"     : "left",
+				"on-scroll"     : 1,
+				"format": {
+					"months":     "<span color='#ffead3'><b>{}</b></span>",
+					"days":       "<span color='#ffedc7'><b>{}</b></span>",
+					"weeks":      "<span color='#454545'><b>{}</b></span>",
+					"weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+					"today":      "<span color='#ff6699'><b>{}</b></span>"
+				},
+				"actions":  {
+					"on-click-right": "mode",
+					"on-click-forward": "tz_up",
+					"on-click-backward": "tz_down",
+					"on-scroll-up": "shift_up",
+					"on-scroll-down": "shift_down"
+				}
+			}
+		},
+
+		"battery": {
+			"interval" : 2,
+			"states": {
+					"warning": 35,
+					"critical": 15
+			},
+			"format": "<span color='#d92b2b'>{icon}</span> {capacity}%",
+			"format-charging": " {capacity}%",
+			"format-plugged": " {capacity}%",
+			"format-icons": ["", "", "", "", ""],
+			"tooltip-format": "{power}W - {time}"
+		},
+
+		"temperature": {
+			"format": "<span color='#d92b2b'></span> {temperatureC}°C",
+			"hwmon-path": "/sys/class/thermal/thermal_zone1/temp",
+			"critical-threshold": 80
+		},
+
+		"custom/cpuhist": {
+			"exec": "~/.config/waybar/scripts/cpu_history.py -d 30",
+			"format": "<span color='#d92b2b'></span> {}",
+			"interval": 1,
+			"return-type": "json",
+			"on-click": "~/.config/waybar/scripts/cpu_history.py toggle"
+		},
+
+		"custom/memhist": {
+			"exec": "~/.config/waybar/scripts/mem_history.py -d 30",
+			"format": "<span color='#d92b2b'></span> {}",
+			"interval": 1,
+			"return-type": "json",
+			"on-click": "~/.config/waybar/scripts/mem_history.py toggle"
+		},
+
+		"disk": {
+			"interval": 30,
+			"format": "<span color='#d92b2b'></span> {used}/{total}",
+			"path": "/",
+			"states": {
+				"critical": 90,
+				"warning": 70,
+			}
+		},
+
+		"cava": {
+			"framerate": 30,
+			"autosens": 1,
+			"bars": 14,
+			"lower_cutoff_freq": 50,
+			"higher_cutoff_freq": 8000,
+			"method": "pulse",
+			"source": "auto",
+			"stereo": false,
+			"reverse": false,
+			"bar_delimiter": 0,
+			"monstercat": true,
+			"waves": false,
+			"noise_reduction": 0.50,
+			"input_delay": 2,
+			"format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+			"actions": {
+				 "on-click-right": "mode"
+			 }
+		},
+
+		"network": {
+			"format": "<span color='#d92b2b'>󰛳</span> {ifname}",
+			"format-wifi": "<span color='#d92b2b'></span> {essid}",
+			"format-disconnected": "<span color='#d92b2b'>⚠</span> Disconnected",
+			"tooltip-format": "{ifname} - {ipaddr}"
+		},
 	},
 
-	"temperature": {
-		"format": " {temperatureC}°C",
-		"hwmon-path": "/sys/class/thermal/thermal_zone1/temp",
-		"critical-threshold": 80
-	},
 
-	"cpu": {
-		"interval": 5,
-		"format": " {usage}%",
-		"states": {
-			"critical": 80,
-			"warning": 50,
-		}
-	},
+	{
+		"position": "bottom",
+		"height": 32,
+		"spacing": 4,
 
-	"memory": {
-		"interval": 5,
-		"format": " {}%",
-		"states": {
-			"critical": 80,
-			"warning": 50,
-		}
-	},
+		"modules-left": [
+			"pulseaudio",
+			"custom/media"
+		],
 
-	"disk": {
-		"interval": 30,
-		"format": " {percentage_used}%",
-		"path": "/",
-		"states": {
-			"critical": 90,
-			"warning": 70,
-		}
-	},
+		"modules-center": [
+			"hyprland/workspaces"
+		],
 
-	"custom/sep": {
-		"format": ":"
-	},
+		"modules-right": [
+			"tray",
+			"privacy"
+		],
 
-	"cava": {
-		"framerate": 30,
-		"autosens": 1,
-		"bars": 14,
-		"lower_cutoff_freq": 50,
-		"higher_cutoff_freq": 8000,
-		"method": "pulse",
-		"source": "auto",
-		"stereo": false,
-		"reverse": false,
-		"bar_delimiter": 0,
-		"monstercat": true,
-		"waves": false,
-		"noise_reduction": 0.50,
-		"input_delay": 2,
-		"format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
-		"actions": {
-			 "on-click-right": "mode"
-		 }
-	},
+		"hyprland/workspaces": {
+			"format": "{icon}",
+			"format-icons": {
+				"active": "",
+				"default": "",
+			},
+		},
 
-	"network": {
-		"format": " {ifname}",
-		"format-wifi": " {essid}",
-		"format-disconnected": "⚠ Disconnected",
-		"tooltip-format": "{ifname} - {ipaddr}"
-	},
+		"tray": {
+			"icon-size": 12,
+			"spacing": 4,
+			"icons": {
+				"vesktop": "discord-white"
+			}
+		},
 
-	"pulseaudio": {
-		"format": "{format_source} {icon} {volume}%",
-		"format-bluetooth": "{format_source} {icon} {volume}%",
-    "format-muted": "",
-		"format-source": " {volume}%",
-		"format-source-muted": "",
-		"format-icons": {
-			"headphone": "",
-			"hands-free": "",
-			"headset": "",
-			"phone": "",
-			"portable": "",
-			"car": "",
-			"default": ["", ""]
-    },
-		"on-click": "pavucontrol"
-	},
+		"custom/media": {
+			"format": "{}",
+			"return-type": "json",
+			"max-length": 120,
+			"escape": false,
+			"exec": "$HOME/.config/waybar/scripts/mediaplayer.py 2> /dev/null"
+		},
 
-	"custom/media": {
-		"format": " {} ",
-		"return-type": "json",
-		"max-length": 40,
-		"escape": true,
-		"exec": "$HOME/.config/waybar/scripts/mediaplayer.py --player spotify 2> /dev/null"
+		"pulseaudio": {
+			"format": "{format_source} <span color='#d92b2b'>{icon}</span> {volume}%",
+			"format-bluetooth": "{format_source} <span color='#d92b2b'>{icon}</span> {volume}%",
+			"format-muted": "{format_source} <span color='#d92b2b'></span>",
+			"format-source": "<span color='#d92b2b'></span> {volume}%",
+			"format-source-muted": "<span color='#d92b2b'> </span>",
+			"format-icons": {
+				"headphone": "",
+				"hands-free": "",
+				"headset": "",
+				"phone": "",
+				"portable": "",
+				"car": "",
+				"default": ["", ""]
+			},
+			"on-click": "pavucontrol"
+		},
 	}
-}
-
+]

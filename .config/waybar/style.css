@@ -1,49 +1,37 @@
 * {
-	font-family: "JetBrainsMono", "Font Awesome 6 Free";	
-	font-size: 14px;
+	font-family: "Jetbrains Mono", "Symbols Nerd Font", "Font Awesome 7 Free", "Font Awesome 7 Brands";	
+	font-size: 12px;
 	border: 0px;
 }
 
 window#waybar {
-	font-weight: 500;
-	background-color: #0C0D11; 
-	color: #CCC9A1;
-	transition-property: background-color;
-	transition-duration: .5s;
+	font-weight: 700;
+	background-color: #000000; 
+	color: #FFFFFF;
 }
 
 #workspaces button {
-	color: #CCC9A1;
-	font-weight: 500;
+	color: #d92b2b;
 	background: transparent;
-	margin-right: -6px;
+	padding: 0px;
 }
 
 #workspaces button:hover {
 	box-shadow: inherit;
 	text-shadow: inherit;
-	font-weight: 900;
+	color: #d92b2b;
 }
 
 #workspaces button.active {
-	font-weight: 900;
+	color: #d92b2b;
 }
 
 .modules-right * {
 	margin-right: 8px;
 }
 
-.modules-left #custom-sep {
-	margin-right: 8px;
-	margin-left: 2px;
-}
-
-.modules-left #cava {
+.modules-left * {
 	margin-left: 8px;
-}
-
-#custom-sep {
-	color: #FFF;
 }
 
 #battery.charging {
@@ -59,22 +47,6 @@ window#waybar {
 	color: #d12121;
 }
 
-#cpu.warning {
-	color: #d19721;
-}
-
-#cpu.critical {
-	color: #d12121;
-}
-
-#memory.warning {
-	color: #d19721;
-}
-
-#memory.critical {
-	color: #d12121;
-}
-
 #disk.warning {
 	color: #d19721;
 }
@@ -82,8 +54,6 @@ window#waybar {
 #disk.critical {
 	color: #d12121;
 }
-
-
 
 @keyframes rainbow{
 		0%{
