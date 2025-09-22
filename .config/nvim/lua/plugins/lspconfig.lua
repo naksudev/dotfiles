@@ -6,14 +6,13 @@ Plugin.dependencies =  {
 }
 
 function Plugin.config()
-	local lspconfig = require('lspconfig')
+	vim.lsp.config('pyright', {})
 
-	lspconfig.pyright.setup {}
-	lspconfig.rust_analyzer.setup {
+	vim.lsp.config('rust_analyzer', {
 		settings = {
-			['rust-analyzer'] = {},
-		},
-	}
+			['rust-analyzer'] = {}
+		}
+	})
 
 	vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 	vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
