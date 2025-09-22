@@ -14,6 +14,7 @@ CONFIG_FILES=(
 	".config/kitty"
 	".config/swaync"
 	".config/rofi"
+	".config/fastfetch"
 )
 
 # Back up function (single file or directory)
