@@ -12,7 +12,7 @@ CONFIG_FILES=(
 	".config/user-dirs.dirs"
 	".config/user-dirs.locale"
 	".config/kitty"
-	".config/dunst"
+	".config/swaync"
 	".config/rofi"
 )
 
