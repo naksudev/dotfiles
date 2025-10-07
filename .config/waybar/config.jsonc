@@ -170,6 +170,11 @@
 			}
 		},
 
+		"privacy": {
+			"icon-size": 12,
+			"icon-spacing": 4
+		},
+
 		"custom/media": {
 			"format": "{}",
 			"return-type": "json",
