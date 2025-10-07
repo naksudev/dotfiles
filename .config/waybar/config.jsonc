@@ -37,7 +37,7 @@
 
 		"clock": {
 			"format": "<span color='#d92b2b'></span> {:%H:%M}",
-			"tooltip-format": "<tt><small>{calendar}</small></tt>",
+			"tooltip-format": "<tt>{calendar}</tt>",
 			"format-alt": "<span color='#d92b2b'></span> {:%d/%m/%Y}",
 			"calendar": {
 				"mode"          : "year",
@@ -135,7 +135,6 @@
 		},
 	},
 
-
 	{
 		"position": "bottom",
 		"height": 32,
@@ -143,7 +142,7 @@
 
 		"modules-left": [
 			"pulseaudio",
-			"custom/media"
+			"custom/media",
 		],
 
 		"modules-center": [
