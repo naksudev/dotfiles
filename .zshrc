@@ -33,8 +33,8 @@ typeset -gA ZSH_HIGHLIGHT_STYLES
 alias py="python3"
 alias vim="nvim"
 alias ip="ip -c"
-alias venv="python3 -m venv .venv"
-alias help="echo No."
+alias _venv="python3 -m venv .venv"
+alias _tsm="sudo ~/Crafting_Table/game_servers/tsm.sh"
 
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
@@ -68,3 +68,4 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
