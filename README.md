@@ -10,7 +10,3 @@ Welcome to my **dotfiles**! This repo contains my configuration files, "optimize
 - **Terminal**: kitty
 - **Editor**: Neovim with the catppucin mocha theme.
 
-## Checklist
-- [ ] Auto-spawn a tmux session on SSH login
-- [ ] Configure tmux status bar
-- [ ] Clean up the .zshrc file 
