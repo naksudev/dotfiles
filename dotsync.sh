@@ -4,7 +4,6 @@ set -euo pipefail
 
 CONFIG_FILES=(
 	".zshrc"
-	".zshenv"
 	".config/nvim"
 	".config/hypr"
 	".config/waybar"
