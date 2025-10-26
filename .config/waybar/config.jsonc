@@ -163,7 +163,7 @@
 		},
 
 		"tray": {
-			"icon-size": 12,
+			"icon-size": 14,
 			"spacing": 4,
 			"icons": {
 				"vesktop": "discord-white"
@@ -171,7 +171,7 @@
 		},
 
 		"privacy": {
-			"icon-size": 12,
+			"icon-size": 14,
 			"icon-spacing": 4
 		},
 
