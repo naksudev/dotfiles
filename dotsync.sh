@@ -14,6 +14,7 @@ CONFIG_FILES=(
 	".config/swaync"
 	".config/rofi"
 	".config/fastfetch"
+	".p10k.zsh"
 )
 
 # Back up function (single file or directory)
