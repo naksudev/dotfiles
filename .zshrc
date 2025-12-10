@@ -4,15 +4,13 @@
 # ┃	Last updated: 10-21-2025                 ┃
 # ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
-
- 
 # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 # ┃	ℹ️ ~ Fastfetch                           ┃
 # ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 if [[ -n "$TMUX" ]]; then
-	[[ $- =~ i ]] && fastfetch --color "#cf1717" --logo-type none
+	[[ $- =~ i ]] && fastfetch --color "#cf1717" --logo-type none;
 else
-	fastfetch --color "#cf1717" 
+	fastfetch --color "#cf1717";
 fi
 
 
