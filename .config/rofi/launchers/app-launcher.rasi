@@ -57,6 +57,7 @@ window {
     anchor:                      center;
     fullscreen:                  false;
     width:                       600px;
+		height: 										 526px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -198,7 +199,7 @@ element {
     cursor:                      pointer;
 }
 element normal.normal {
-    background-color:            var(normal-background);
+    background-color:            transparent;
     text-color:                  var(normal-foreground);
 }
 element normal.urgent {
@@ -222,7 +223,7 @@ element selected.active {
     text-color:                  var(selected-active-foreground);
 }
 element alternate.normal {
-    background-color:            var(alternate-normal-background);
+    background-color:            transparent;
     text-color:                  var(alternate-normal-foreground);
 }
 element alternate.urgent {
