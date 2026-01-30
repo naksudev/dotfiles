@@ -4,12 +4,12 @@ Plugin.dependencies = {
   -- Sources
   { 'hrsh7th/cmp-buffer' },
   { 'hrsh7th/cmp-path' },
-  { 'saadparwaiz1/cmp_luasnip' },
   { 'hrsh7th/cmp-nvim-lsp' },
+  { 'hrsh7th/cmp-cmdline' },
 
-  -- Snippets
+  -- Snippet Engine
   { 'L3MON4D3/LuaSnip' },
-  { 'rafamadriz/friendly-snippets' },
+  { 'saadparwaiz1/cmp_luasnip' },
 }
 
 Plugin.config = function()
@@ -24,10 +24,13 @@ Plugin.config = function()
         luasnip.lsp_expand(args.body)
       end,
     },
+		window = {
+      documentation = cmp.config.window.bordered(),
+    },
     mapping = cmp.mapping.preset.insert({
 			['<C-b>'] = cmp.mapping.scroll_docs(-4),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
-      ['<C-Space>'] = cmp.mapping.complete(),
+			['<C-Space>'] = cmp.mapping.complete(),
       ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }),
     }),
@@ -35,7 +38,7 @@ Plugin.config = function()
       { name = "nvim_lsp" },
       { name = "luasnip" },
       { name = "buffer" },
-      { name = "path" },
+			{ name = "path" },
     }),
   })
 end

@@ -6,13 +6,17 @@ Plugin.dependencies =  {
 }
 
 function Plugin.config()
-	vim.lsp.config('pyright', {})
+	-- Python
+  vim.lsp.config.pyright = {}
 
-	vim.lsp.config('rust_analyzer', {
-		settings = {
-			['rust-analyzer'] = {}
-		}
-	})
+  -- QML (custom server)
+  vim.lsp.config.qmlls = {
+		cmd = { "qmlls6" },
+		filetypes = { "qml", "qmljs" }
+	}
+
+	vim.lsp.enable("qmlls")
+	vim.lsp.enable("pyright")
 
 	vim.keymap.set('n', '<space>e', vim.diagnostic.open_float)
 	vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
