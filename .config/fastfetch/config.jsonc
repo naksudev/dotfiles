@@ -50,7 +50,6 @@
   "logo": {
     "type": "kitty",
     "source": "~/Pictures/another_cola_pfp.jpg",
-    "width": 22,
     "height": 10,
 		"position": "left"
   }
