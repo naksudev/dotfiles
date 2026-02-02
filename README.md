@@ -2,7 +2,7 @@
 Welcome to my **dotfiles**! This repo contains my configuration files, "optimized" for a [Hyprland](https://hypr.land/) setup. It also includes configuration for development tools, terminal environment, and overall appearance...
 
 ## Overview
-![screenshot](screenshots/12-08-2025.png)
+![screenshot](screenshots/02-02-2026.png)
 
 ## Stuff I use
 - **Shell**: zsh with Oh-My-Zsh plugins and custom aliases.
