@@ -30,6 +30,8 @@
 			"modules": [
 				"network",
 				"bluetooth",
+				"pulseaudio",
+				"power-profiles-daemon",
 				"battery",
 			]
 		},
@@ -150,11 +152,11 @@
 		},
 
 		"pulseaudio": {
-			"format": "{format_source} <span color='#d92b2b'>{icon}</span> {volume}%",
-			"format-bluetooth": "{format_source} <span color='#d92b2b'>{icon}</span> {volume}%",
-			"format-muted": "{format_source} <span color='#d92b2b'></span>",
-			"format-source": "<span color='#d92b2b'></span> {volume}%",
-			"format-source-muted": "<span color='#d92b2b'> </span>",
+			"format": "{icon}",
+			"format-bluetooth": "{icon}",
+			"format-muted": "",
+			"format-source": "",
+			"format-source-muted": "",
 			"format-icons": {
 				"headphone": "",
 				"hands-free": "󰋎",
@@ -165,6 +167,18 @@
 				"default": ["", ""]
 			},
 			"on-click": "pavucontrol"
+		},
+
+		"power-profiles-daemon": {
+			"format": "{icon}",
+			"tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+			"tooltip": true,
+			"format-icons": {
+				"default": "",
+				"performance": "",
+				"balanced": "",
+				"power-saver": ""
+			}
 		},
 
 		"network": {
