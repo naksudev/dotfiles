@@ -2,43 +2,67 @@
 	{
 		// Bar configuration
 		"layer": "top",
-		"position": "top",
-		"height": 32,
-		"spacing": 4,
+		"position": "left",
+		"width": 48,
+		"spacing": 8,
 
 		// Modules orders
 		"modules-left": [
-			"temperature",
-			"custom/cpuhist",
-			"custom/memhist",
-			"disk",
+			"custom/os_icon",
+			"hyprland/workspaces",
 		],
 
+
 		"modules-center": [
-			"clock"
+			"hyprland/window",
 		],
 
 		"modules-right": [
-			"network",
-			"battery"
+			"tray",
+			"privacy",
+			"group/system",	
+			"clock",
 		],
+
+		// Groups
+		"group/system": {
+			"orientation": "vertical",
+			"modules": [
+				"network",
+				"bluetooth",
+				"battery",
+			]
+		},
 
 		// Modules configurations
 		"hyprland/workspaces": {
-			"disable-scroll": true,
 			"all-outputs": false,
-			"warp-on-scroll": false,
-			"format": "",
+			"format": "󰫢",
 		},
 
 		"hyprland/window": {
-			"format": "{}",
+			"format": "{initialTitle}",
+			"rotate": 90,
+			"tooltip": false,
+			"icon": true,
+			"icon-size": 14,
+			"rewrite": {
+				"": " Desktop"
+			}
+		},
+
+		"custom/space": {
+			"format": " ",
+		},
+
+		"custom/os_icon": {
+			"format": "󰣇",
 		},
 
 		"clock": {
-			"format": "<span color='#d92b2b'></span> {:%H:%M}",
+			"format": "{:%H\n%M}",
 			"tooltip-format": "<tt>{calendar}</tt>",
-			"format-alt": "<span color='#d92b2b'></span> {:%d/%m/%Y}",
+			"format-alt": "{:%d\n<span color='#82ce6f'>%m</span>\n%y}",
 			"calendar": {
 				"mode"          : "year",
 				"mode-mon-col"  : 3,
@@ -62,48 +86,25 @@
 		},
 
 		"battery": {
-			"interval" : 2,
+			"interval" : 60,
 			"states": {
 					"warning": 35,
 					"critical": 15
 			},
-			"format": "<span color='#d92b2b'>{icon}</span> {capacity}%",
-			"format-charging": " {capacity}%",
-			"format-plugged": " {capacity}%",
-			"format-icons": ["", "", "", "", ""],
+			"format": "{icon}",
+			"format-charging": "",
+			"format-plugged": "",
+			"format-icons": ["󰂎", "󰁼", "󰁾", "󰂀", "󰁹"],
 			"tooltip-format": "{power}W - {time}"
 		},
 
-		"temperature": {
-			"format": "<span color='#d92b2b'></span> {temperatureC}°C",
-			"hwmon-path": "/sys/class/thermal/thermal_zone1/temp",
-			"critical-threshold": 80
-		},
-
-		"custom/cpuhist": {
-			"exec": "~/.config/waybar/scripts/cpu_history.py -d 30",
-			"format": "<span color='#d92b2b'></span> {}",
-			"interval": 1,
-			"return-type": "json",
-			"on-click": "~/.config/waybar/scripts/cpu_history.py toggle"
-		},
-
-		"custom/memhist": {
-			"exec": "~/.config/waybar/scripts/mem_history.py -d 30",
-			"format": "<span color='#d92b2b'></span> {}",
-			"interval": 1,
-			"return-type": "json",
-			"on-click": "~/.config/waybar/scripts/mem_history.py toggle"
-		},
-
-		"disk": {
-			"interval": 30,
-			"format": "<span color='#d92b2b'></span> {used}/{total}",
-			"path": "/",
-			"states": {
-				"critical": 90,
-				"warning": 70,
-			}
+		"bluetooth": {
+			"format": "󰂯",
+			"format-disabled": "󰂲",
+			"format-connected": "󰂱",
+			"tooltip-format": "{controller_alias}\t{controller_address}",
+			"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+			"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
 		},
 
 		"cava": {
@@ -127,52 +128,17 @@
 			 }
 		},
 
-		"network": {
-			"format": "<span color='#d92b2b'>󰛳</span> {ifname}",
-			"format-wifi": "<span color='#d92b2b'></span> {essid}",
-			"format-disconnected": "<span color='#d92b2b'>⚠</span> Disconnected",
-			"tooltip-format": "{ifname} - {ipaddr}"
-		},
-	},
-
-	{
-		"position": "bottom",
-		"height": 32,
-		"spacing": 4,
-
-		"modules-left": [
-			"pulseaudio",
-			"custom/media",
-		],
-
-		"modules-center": [
-			"hyprland/workspaces"
-		],
-
-		"modules-right": [
-			"tray",
-			"privacy"
-		],
-
-		"hyprland/workspaces": {
-			"format": "{icon}",
-			"format-icons": {
-				"active": "",
-				"default": "",
-			},
-		},
-
 		"tray": {
-			"icon-size": 14,
-			"spacing": 4,
+			"icon-size": 16,
+			"spacing": 12,
 			"icons": {
 				"vesktop": "discord-white"
 			}
 		},
 
 		"privacy": {
-			"icon-size": 14,
-			"icon-spacing": 4
+			"icon-size": 16,
+			"icon-spacing": 12
 		},
 
 		"custom/media": {
@@ -200,5 +166,12 @@
 			},
 			"on-click": "pavucontrol"
 		},
-	}
+
+		"network": {
+			"format": "󰛳",
+			"format-wifi": "",
+			"format-disconnected": "<span color='#d92b2b'>⚠</span>",
+			"tooltip-format": "{ifname} - {ipaddr}"
+		},
+	},
 ]

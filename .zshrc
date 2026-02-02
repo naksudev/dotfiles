@@ -8,9 +8,9 @@
 # ┃	ℹ️ ~ Fastfetch                           ┃
 # ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 if [[ -n "$TMUX" ]]; then
-	[[ $- =~ i ]] && fastfetch --color "#cf1717" --logo-type none;
+	[[ $- =~ i ]] && fastfetch --color "#C82828" --logo-type none;
 else
-	fastfetch --color "#cf1717";
+	fastfetch --color "#C82828";
 fi
 
 

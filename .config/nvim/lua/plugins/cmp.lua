@@ -39,6 +39,7 @@ Plugin.config = function()
       { name = "luasnip" },
       { name = "buffer" },
 			{ name = "path" },
+			{ name = "cmd" },
     }),
   })
 end

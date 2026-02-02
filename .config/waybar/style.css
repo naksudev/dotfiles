@@ -1,37 +1,82 @@
+@define-color background        rgba(15, 15, 15, 1.0);
+@define-color foreground        rgba(220, 220, 220, 1.0);
+
+@define-color accent            rgba(30, 30, 30, 1.0);
+
+@define-color element           rgba(230, 80, 80, 1.0);
+@define-color element-active    rgba(250, 230, 230, 1.0);
+@define-color element-hover     rgba(120, 50, 50, 1.0);
+
+
 * {
-	font-family: "Jetbrains Mono", "Symbols Nerd Font", "Font Awesome 7 Free", "Font Awesome 7 Brands";	
-	font-size: 12px;
-	border: 0px;
+	font-family: "Iosevka Nerd Font Propo";	
+	font-size: 14px;
 }
 
 window#waybar {
 	font-weight: 700;
-	background-color: #000000; 
-	color: #FFFFFF;
+	background-color: @background;
+	color: @foreground;
+	border-radius: 0px 8px 8px 0px;
+}
+
+.modules-left {
+	margin-top: 12px;
+}
+
+.modules-right {
+	margin-bottom: 12px;
+}
+
+#custom-os_icon {
+	font-size: 20px;
+}
+
+#workspaces, #system {
+	background-color: @accent;
+	border-radius: 24px;
+	margin: 2px 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 
 #workspaces button {
-	color: #FFFFFF;
-	background: transparent;
+	color: @element;
+	background-color: transparent;
 	padding: 0px;
 }
 
 #workspaces button:hover {
 	box-shadow: inherit;
 	text-shadow: inherit;
-	color: #d92b2b;
+	color: @element-hover;
+	transition: all 0.3s ease;
 }
 
 #workspaces button.active {
-	color: #d92b2b;
+	color: @element-active;
+	transition: all 0.2s ease;
 }
 
-.modules-right * {
-	margin-right: 8px;
+#system {
+	color: @element;
+	margin-bottom: 4px;
+	font-size: 16px;
+	margin-top: 6px;
 }
 
-.modules-left * {
-	margin-left: 8px;
+#system * {
+	font-size: 16px;
+	padding: 2px;
+}
+
+#system *:hover {
+	color: @element-hover;
+	transition: all 0.3s ease;
+}
+
+#clock {
+	font-size: 16px;
 }
 
 #battery.charging {
@@ -44,14 +89,6 @@ window#waybar {
 }
 
 #battery.critical {
-	color: #d12121;
-}
-
-#disk.warning {
-	color: #d19721;
-}
-
-#disk.critical {
 	color: #d12121;
 }
 
