@@ -26,7 +26,7 @@ backup_file() {
 		echo "Syncing $source"
 		rsync -a --delete "$source" "$(dirname "$destination")/"
 	else
-		echo "$1 file or folder no longer exists in the source. Deleting it in destination."
+		echo "$1 file or folder no longer exists in the source. Deleting it in repo."
 		rm -rf "$destination"
 	fi
 }
