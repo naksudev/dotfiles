@@ -48,6 +48,7 @@
 			"tooltip": false,
 			"icon": true,
 			"icon-size": 14,
+			"max-length": 48,
 			"rewrite": {
 				"": " Desktop"
 			}
@@ -64,7 +65,7 @@
 		"clock": {
 			"format": "{:%H\n%M}",
 			"tooltip-format": "<tt>{calendar}</tt>",
-			"format-alt": "{:%d\n<span color='#82ce6f'>%m</span>\n%y}",
+			"format-alt": "{:%d\n<span color='#e65050'>%m</span>\n%y}",
 			"calendar": {
 				"mode"          : "year",
 				"mode-mon-col"  : 3,
@@ -185,7 +186,7 @@
 			"format": "󰛳",
 			"format-wifi": "",
 			"format-disconnected": "<span color='#d92b2b'>⚠</span>",
-			"tooltip-format": "{ifname} - {ipaddr}"
+			"tooltip-format": "{essid}\n{ifname} - {ipaddr}"
 		},
 	},
 ]

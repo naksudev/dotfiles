@@ -77,6 +77,7 @@ window#waybar {
 
 #clock {
 	font-size: 16px;
+	transition: padding 0.2s ease;
 }
 
 #battery.charging {
