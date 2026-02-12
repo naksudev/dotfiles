@@ -1,7 +1,6 @@
 -- This is my personal Neovim configuration supporting Linux and Windows (not tested on Mac), with a bunch of plugins.
 -- I tried to make my configuration as simple as possible to have a sort of plug-n-play feeling.
--- I don't recommend using this configuration but rather taking the overall structure of it if you're searching
--- for a starting point of your own Neovim configuration.
+-- I don't recommend using this configuration as there are a lot of problems. And because I am not familiar with Lua.
 
 -- Setups at the very start
 vim.g.loaded_netrw = 1
