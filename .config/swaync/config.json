@@ -54,7 +54,8 @@
     "inhibitors",
     "title",
     "dnd",
-    "notifications"
+    "notifications",
+		"mpris"
   ],
   "widget-config": {
     "notifications": {
@@ -66,7 +67,7 @@
       "clear-all-button": true
     },
     "title": {
-      "text": "Notifications",
+      "text": "Control Panel",
       "clear-all-button": true,
       "button-text": "Clear All"
     },
@@ -81,7 +82,7 @@
       "blacklist": [],
       "autohide": false,
       "show-album-art": "always",
-      "loop-carousel": false
+      "loop-carousel": false 
     },
     "buttons-grid": {
       "buttons-per-row": 7,
