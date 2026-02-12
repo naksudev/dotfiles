@@ -57,7 +57,7 @@ alias py="python3"
 alias vim="nvim"
 alias ip="ip -c"
 alias _venv="python3 -m venv .venv"
-alias _tsm="sudo ~/Crafting_Table/game_servers/tsm.sh"
+alias _tsm="~/Crafting_Table/game_servers/tsm.sh"
 
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
