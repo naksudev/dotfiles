@@ -17,7 +17,6 @@ window#waybar {
 	font-weight: 700;
 	background-color: @background;
 	color: @foreground;
-	border-radius: 0px 8px 8px 0px;
 }
 
 .modules-left {
