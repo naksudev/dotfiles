@@ -1,7 +1,7 @@
 local Plugin = { 'nvim-treesitter/nvim-treesitter', build = ":TSUpdate" }
 
 Plugin.config = function()
-	local configs = require('nvim-treesitter.configs')
+	local configs = require('nvim-treesitter.config')
 
 	configs.setup({
 		ensure_installed = { "c", "lua", "python", "javascript", "html", "css", "yaml", "tsx", "typescript"},
