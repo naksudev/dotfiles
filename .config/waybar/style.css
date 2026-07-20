@@ -37,6 +37,7 @@ window#waybar {
 	margin: 2px 8px;
 	padding-top: 8px;
 	padding-bottom: 8px;
+	transition: all 0.3s ease;
 }
 
 #workspaces button {
@@ -46,6 +47,8 @@ window#waybar {
 }
 
 #workspaces button:hover {
+	background: transparent;
+	border: 1px solid transparent;
 	box-shadow: inherit;
 	text-shadow: inherit;
 	color: @element-hover;
