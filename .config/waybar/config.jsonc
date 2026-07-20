@@ -9,19 +9,19 @@
 		// Modules orders
 		"modules-left": [
 			"custom/os_icon",
-			"hyprland/workspaces",
+			"hyprland/workspaces"
 		],
 
 
 		"modules-center": [
-			"hyprland/window",
+			"hyprland/window"
 		],
 
 		"modules-right": [
 			"tray",
 			"privacy",
 			"group/system",	
-			"clock",
+			"clock"
 		],
 
 		// Groups
@@ -32,14 +32,20 @@
 				"bluetooth",
 				"pulseaudio",
 				"power-profiles-daemon",
-				"battery",
+				"battery"
 			]
 		},
 
 		// Modules configurations
 		"hyprland/workspaces": {
 			"all-outputs": false,
-			"format": "󰫢",
+			"format": "{icon}",
+			"format-icons": {
+				"default": "󰫢",
+				"special": "󰫤"
+			},
+			"show-special": true,
+			"special-visible-only": true
 		},
 
 		"hyprland/window": {
@@ -55,11 +61,11 @@
 		},
 
 		"custom/space": {
-			"format": " ",
+			"format": " "
 		},
 
 		"custom/os_icon": {
-			"format": "󰣇",
+			"format": "󰣇"
 		},
 
 		"clock": {
@@ -98,7 +104,7 @@
 			"format-charging": "",
 			"format-plugged": "",
 			"format-icons": ["󰂎", "󰁼", "󰁾", "󰂀", "󰁹"],
-			"tooltip-format": "{power}W - {time}"
+			"tooltip-format": "Capacity: {capacity}%\n{power}W - {time}"
 		},
 
 		"bluetooth": {
@@ -108,27 +114,6 @@
 			"tooltip-format": "{controller_alias}\t{controller_address}",
 			"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
 			"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
-		},
-
-		"cava": {
-			"framerate": 30,
-			"autosens": 1,
-			"bars": 14,
-			"lower_cutoff_freq": 50,
-			"higher_cutoff_freq": 8000,
-		"method": "pulse",
-			"source": "auto",
-			"stereo": false,
-			"reverse": false,
-			"bar_delimiter": 0,
-			"monstercat": true,
-			"waves": false,
-			"noise_reduction": 0.50,
-			"input_delay": 2,
-			"format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
-			"actions": {
-				 "on-click-right": "mode"
-			 }
 		},
 
 		"tray": {
@@ -187,6 +172,6 @@
 			"format-wifi": "",
 			"format-disconnected": "<span color='#d92b2b'>⚠</span>",
 			"tooltip-format": "{essid}\n{ifname} - {ipaddr}"
-		},
-	},
+		}
+	}
 ]
