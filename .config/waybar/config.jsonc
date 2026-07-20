@@ -60,12 +60,9 @@
 			}
 		},
 
-		"custom/space": {
-			"format": " "
-		},
-
 		"custom/os_icon": {
-			"format": "󰣇"
+			"format": "󰣇",
+			"tooltip": false
 		},
 
 		"clock": {
