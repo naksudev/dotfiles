@@ -101,7 +101,9 @@ hl.config({
 	misc = {
 		force_default_wallpaper = 0,
 		disable_hyprland_logo = true,
-		background_color = "0x000000"
+		disable_splash_rendering = true,
+		background_color = "0x000000",
+		disable_autoreload = true
 	},
 
 	ecosystem = {
