@@ -4,6 +4,10 @@ Welcome to my Neovim configuration!
 This file is just the entrypoint to other files
 and contains global configuration for Neovim.
 
+It is also worth mentionning that this configuration 
+is heavily based on https://github.com/dam9000/kickstart-modular.nvim
+which is a fork of https://github.com/nvim-lua/kickstart.nvim.
+
 ⣠⣤⣄⣾⣿⡷⣠⣴⣶⣿⣿⣿⣿⣿⣿⣷⣶⣤⡀
 ⠀⣼⠋⠀⣾⡟⣳⣾⣿⡿⣿⣿⣿⠟⣿⣿⣿⣿⣿⣿⣿⣷⣄
 ⠀⡇⠀⠀⠉⢱⣿⣿⡿⢰⣿⣿⠃⢰⣿⣿⣿⣿⣿⡟⢿⣿⣿⣷
