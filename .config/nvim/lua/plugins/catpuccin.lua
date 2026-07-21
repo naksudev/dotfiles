@@ -50,6 +50,16 @@ return {
         },
         bufferline = true,
         mason = true,
+        lualine = {
+          all = function(colors)
+            return {
+              normal = {
+                a = { bg = "#e65050" },
+                b = { fg = "#e65050" },
+              },
+            }
+          end,
+        },
         -- For more plugins integrations: https://github.com/catppuccin/nvim#integrations
       },
     },
