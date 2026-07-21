@@ -37,5 +37,3 @@ require('autocmds')
 require('lazy-install')
 require('lazy-plugins')
 
--- Environment variable
-vim.env.NVIM = 1
