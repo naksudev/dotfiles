@@ -1,11 +1,9 @@
 # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-# ┃	🌠 ~ Naksu's zsh configuration file      ┃
-# ┃	---                                      ┃
-# ┃	Last updated: 10-21-2025                 ┃
+# ┃ 🌠 ~ Naksu's zsh configuration file      ┃
 # ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 
 # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-# ┃	ℹ️ ~ Fastfetch                           ┃
+# ┃ ℹ️ ~ Fastfetch                           ┃
 # ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 if [[ -n "$TMUX" ]]; then
 	[[ $- =~ i ]] && fastfetch --color "#C82828" --logo-type none;
@@ -15,7 +13,7 @@ fi
 
 
 # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-# ┃	⏩ ~ Powerlevel10k - Instant Prompt      ┃
+# ┃ ⏩ ~ Powerlevel10k - Instant Prompt      ┃
 # ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -23,7 +21,7 @@ fi
 
 
 # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-# ┃	🌐 ~ Environment Variables               ┃
+# ┃ 🌐 ~ Environment Variables               ┃
 # ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 export GPG_TTY="$TTY"
 export GOPATH="$HOME/.go"
@@ -34,7 +32,7 @@ zstyle ':omz:update' mode reminder
 
 
 # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-# ┃	⚙️ ~ Oh My Zsh - Plugins & Configuration ┃
+# ┃ ⚙️ ~ Oh My Zsh - Plugins & Configuration ┃
 # ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 plugins=(
   git
@@ -51,11 +49,13 @@ typeset -gA ZSH_HIGHLIGHT_STYLES
 
 
 # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-# ┃	🧩 ~ Custom Aliases                      ┃
+# ┃ 🧩 ~ Custom Aliases                      ┃
 # ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 alias py="python3"
 alias vim="nvim"
 alias ip="ip -c"
+alias svim="sudo -E nvim"
+alias snvim="sudo -E nvim"
 alias _venv="python3 -m venv .venv"
 alias _tsm="~/Crafting_Table/game_servers/tsm.sh"
 
