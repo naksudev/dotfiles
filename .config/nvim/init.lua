@@ -14,7 +14,8 @@ and contains global configuration for Neovim.
 ⠀⠀⠀⠀⣿⡁⣿⡇⠻⣿⣿⣿⣧⣙⠛⣛⣿⣿⣿⣿⣿⠡⠂⣿⡏
 ⠀⠀⠀⠀⣿⣧⣙⡇⠲⢀⣉⠛⠛⠿⠿⠿⣿⣿⡿⠿⠋⣴⢀⣿⠃
 ⠀⠀⠀⣸⣿⡿⣿⡟⢠⣿⣿⢷⣦⢠⣤⣤⣤⠰⣶⣶⣿⠃⣼⣡
-^ Ascii art by Leivmox
+
+> ASCII art collected from Leivmox's Github ASCII-ART repo.
 --]]
 
 -- Set <space> as leader key
