@@ -31,8 +31,8 @@ hl.bind(mainMod .. ' + mouse:273', hl.dsp.window.resize(), { mouse = true })
 
 -- Groups
 hl.bind(mainMod .. ' + G', hl.dsp.group.toggle())
-hl.bind('ALT + right', hl.dsp.group.next())
-hl.bind('ALT + left', hl.dsp.group.prev())
+hl.bind('SHIFT + ALT + right', hl.dsp.group.next())
+hl.bind('SHIFT + ALT + left', hl.dsp.group.prev())
 hl.bind(mainMod .. ' + CTRL + left', hl.dsp.window.move({ direction = 'left', group_aware = true }))
 hl.bind(mainMod .. ' + CTRL + right', hl.dsp.window.move({ direction = 'right', group_aware = true }))
 hl.bind(mainMod .. ' + CTRL + up', hl.dsp.window.move({ direction = 'up', group_aware = true }))
