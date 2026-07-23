@@ -1,3 +1,4 @@
 nvim/lazy-lock.json
 .config/nvim/lazy-lock.json
 .config/hypr/data
+/.config/waybar/.layout-state
