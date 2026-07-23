@@ -2,7 +2,7 @@
   "$schema": "/etc/xdg/swaync/configSchema.json",
   "ignore-gtk-theme": true,
   "positionX": "right",
-  "positionY": "top",
+  "positionY": "bottom",
   "layer": "overlay",
   "control-center-layer": "top",
   "layer-shell": true,
@@ -55,7 +55,7 @@
     "title",
     "dnd",
     "notifications",
-		"mpris"
+    "mpris"
   ],
   "widget-config": {
     "notifications": {
