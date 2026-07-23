@@ -8,8 +8,6 @@ require('lazy').setup({
 
   require('plugins.cmp'),
 
-  require('plugins.fzf-oil'),
-
   require('plugins.gitsigns'),
 
   require('plugins.highlight-colors'),
@@ -17,6 +15,8 @@ require('lazy').setup({
   require('plugins.lspconfig'),
 
   require('plugins.lualine'),
+
+  require('plugins.telescope'),
 
   require('plugins.todo-comments'),
 
