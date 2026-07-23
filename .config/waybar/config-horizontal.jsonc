@@ -2,8 +2,8 @@
 	{
 		// Bar configuration
 		"layer": "top",
-		"position": "left",
-		"width": 48,
+		"position": "top",
+		"height": 48,
 		"spacing": 8,
 
 		// Modules orders
@@ -26,7 +26,7 @@
 
 		// Groups
 		"group/system": {
-			"orientation": "vertical",
+			"orientation": "horizontal",
 			"modules": [
 				"network",
 				"bluetooth",
@@ -50,7 +50,6 @@
 
 		"hyprland/window": {
 			"format": "{initialTitle}",
-			"rotate": 90,
 			"tooltip": false,
 			"icon": true,
 			"icon-size": 14,
@@ -67,9 +66,9 @@
 		},
 
 		"clock": {
-			"format": "{:%H\n%M}",
+			"format": "{:%H:%M}",
 			"tooltip-format": "<tt>{calendar}</tt>",
-			"format-alt": "{:%d\n<span color='#e65050'>%m</span>\n%y}",
+			"format-alt": "{:%d/<span color='#e65050'>%m</span>/%y}",
 			"calendar": {
 				"mode"          : "year",
 				"mode-mon-col"  : 3,

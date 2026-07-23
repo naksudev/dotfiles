@@ -1,0 +1,120 @@
+@define-color background        rgba(15, 15, 15, 1.0);
+@define-color foreground        rgba(220, 220, 220, 1.0);
+@define-color accent            rgba(30, 30, 30, 1.0);
+@define-color element           rgba(230, 80, 80, 1.0);
+@define-color element-active    rgba(250, 230, 230, 1.0);
+@define-color element-hover     rgba(120, 50, 50, 1.0);
+* {
+	font-family: "Iosevka Nerd Font Propo";	
+	font-size: 14px;
+}
+window#waybar {
+	font-weight: 700;
+	background-color: @background;
+	color: @foreground;
+}
+.modules-left {
+	margin-left: 12px;
+}
+.modules-right {
+	margin-right: 12px;
+}
+#custom-os_icon {
+	font-size: 20px;
+}
+#workspaces, #system {
+	background-color: @accent;
+	border-radius: 24px;
+	margin: 8px 2px;
+	padding-left: 8px;
+	padding-right: 8px;
+	transition: all 0.3s ease;
+}
+#workspaces button {
+	color: @element;
+	background-color: transparent;
+	padding: 0px;
+    margin: 0 2px;
+}
+#workspaces button:hover {
+	background: transparent;
+	border: 1px solid transparent;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	color: @element-hover;
+	transition: all 0.3s ease;
+}
+#workspaces button.active {
+	color: @element-active;
+	transition: all 0.2s ease;
+}
+#system {
+	color: @element;
+	margin-right: 4px;
+	font-size: 16px;
+	margin-left: 6px;
+}
+#system * {
+	font-size: 16px;
+	padding: 2px;
+    margin: 0 4px;
+}
+#system *:hover {
+	color: @element-hover;
+	transition: all 0.3s ease;
+}
+#clock {
+	font-size: 16px;
+	transition: padding 0.2s ease;
+}
+#battery.charging {
+	animation: rainbow 5s linear;
+	animation-iteration-count: infinite;
+}
+#battery.warning {
+	color: #d19721;
+}
+#battery.critical {
+	color: #d12121;
+}
+@keyframes rainbow{
+		0%{
+			color: rgb(255,0,0);
+		}
+		8%{
+			color: rgb(255,127,0);
+		}
+		16%{
+			color: rgb(255,255,0);
+		}
+		25%{
+			color: rgb(127,255,0);
+		}
+		33%{
+			color: rgb(0,255,0);
+		}
+		41%{
+			color: rgb(0,255,127);
+		}
+		50%{
+			color: rgb(0,255,255);
+		}
+		58%{
+			color: rgb(0,127,255);
+		}
+		66%{
+			color: rgb(0,0,255);
+		}
+		75%{
+			color: rgb(127,0,255);
+		}
+		83%{
+			color: rgb(255,0,255);
+		}
+		91%{
+			color: rgb(255,0,127);
+		}
+		100%{
+			color: rgb(255,0,0);
+		}
+}
