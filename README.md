@@ -4,7 +4,7 @@ Welcome to my **dotfiles**! This repo contains my configuration files, "optimize
 It's mainly used on a laptop.
 
 ## Overview
-![screenshot](screenshots/02-02-2026.png)
+![screenshot](screenshots/07-24-2026.png)
 
 ## Stuff I use
 - **Shell**: zsh with Oh-My-Zsh plugins and custom aliases.
