@@ -17,7 +17,7 @@ vim.opt.undofile = true
 
 -- case-insensitive search unless the search pattern contains an uppercase letter
 vim.opt.ignorecase = true
-vim.opt.smartcase = true 
+vim.opt.smartcase = true
 
 -- vsplit opens to the right and split opens below
 vim.opt.splitright = true
@@ -42,4 +42,3 @@ vim.opt.scrolloff = 10
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
-

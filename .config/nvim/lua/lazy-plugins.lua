@@ -16,6 +16,8 @@ require('lazy').setup({
 
   require('plugins.lualine'),
 
+  require('plugins.obsidian'),
+
   require('plugins.telescope'),
 
   require('plugins.todo-comments'),
