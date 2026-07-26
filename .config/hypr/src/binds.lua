@@ -11,10 +11,10 @@ hl.bind(mainMod .. ' + F', hl.dsp.window.fullscreen())
 hl.bind(mainMod .. ' + P', hl.dsp.window.pin())
 hl.bind(mainMod .. ' + X', hl.dsp.window.fullscreen_state({ internal = 2, client = 0 }))
 
-hl.bind(mainMod .. ' + ALT + left', hl.dsp.window.resize({ x = -10, y = 0 }))
-hl.bind(mainMod .. ' + ALT + right', hl.dsp.window.resize({ x = 10, y = 0 }))
-hl.bind(mainMod .. ' + ALT + up', hl.dsp.window.resize({ x = 0, y = 10 }))
-hl.bind(mainMod .. ' + ALT + down', hl.dsp.window.resize({ x = 0, y = -10 }))
+hl.bind(mainMod .. ' + ALT + left', hl.dsp.window.resize({ x = -10, y = 0, relative = true }))
+hl.bind(mainMod .. ' + ALT + right', hl.dsp.window.resize({ x = 10, y = 0, relative = true }))
+hl.bind(mainMod .. ' + ALT + up', hl.dsp.window.resize({ x = 0, y = 10, relative = true }))
+hl.bind(mainMod .. ' + ALT + down', hl.dsp.window.resize({ x = 0, y = -10, relative = true }))
 
 hl.bind(mainMod .. ' + SHIFT + left', hl.dsp.window.move({ direction = 'left' }))
 hl.bind(mainMod .. ' + SHIFT + right', hl.dsp.window.move({ direction = 'right' }))
@@ -56,7 +56,7 @@ hl.bind('XF86MonBrightnessUp', hl.dsp.exec_cmd('brightnessctl set +1% && swayosd
 hl.bind('XF86MonBrightnessDown', hl.dsp.exec_cmd('brightnessctl set 1%- && swayosd-client --brightness lower'))
 
 -- Screenshot
-hl.bind('code:107', hl.dsp.exec_cmd('hyprshot --silent --clipboard-only -m output'))
+hl.bind('code:107', hl.dsp.exec_cmd('hyprshot --silent -o /home/naksu/Pictures/Screenshots/ -m output'))
 hl.bind(mainMod .. ' + code:107', hl.dsp.exec_cmd('hyprshot --clipboard-only -c -m window'))
 hl.bind('SHIFT + code:107', hl.dsp.exec_cmd('hyprshot --clipboard-only -m region'))
 
