@@ -47,18 +47,19 @@ return {
 
       require('mason').setup()
 
-      local ensured_installed = vim.tbl_keys(servers or {})
-      vim.list_extend(ensured_installed, {
+      local ensure_installed = vim.tbl_keys(servers or {})
+      vim.list_extend(ensure_installed, {
         'stylua',
         'lua-language-server',
       })
-      require('mason-tool-installer').setup({ ensure_installed = ensured_installed })
+      require('mason-tool-installer').setup({ ensure_installed = ensure_installed })
 
       require('mason-lspconfig').setup({
         handlers = {
           function(server_name)
             local server = servers[server_name] or {}
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
+            require('lspconfig')[server_name].setup(server)
           end,
         },
       })
@@ -83,6 +84,7 @@ return {
       notify_on_error = false,
       formatters_by_ft = {
         lua = { 'stylua' },
+        python = { 'ruff_format', 'ruff_fix' },
       },
     },
   },
