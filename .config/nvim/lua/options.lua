@@ -42,3 +42,6 @@ vim.opt.scrolloff = 10
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+
+-- Set conceallevel to 2 for obsidian.nvim plugin
+vim.opt.conceallevel = 2
